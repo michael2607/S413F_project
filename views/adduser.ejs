@@ -1,0 +1,25 @@
+<html>
+	<head>
+		<title>Signin</title>
+		
+	</head>
+
+	<body>
+		
+<div class="container">
+<h1>Create New Account</h1>
+<hr/><form action="/adduser" enctype="multipart/form-data" method="post">
+  	<span class="input-group-text">Username</span>
+  	<input name="username" required="" type="text"  />
+	<br/><br/>
+	<span  class="input-group-text">Password</span>
+
+	<input  name="password"  type="password" />
+ 	 <br/><br/>
+	<span  class="input-group-text">Email</span>
+	<input name="email" required="" type="email" />
+	<br/>
+	<br/>
+	<input  type="submit" value="Submit" /> <a  href="/login">Already Have a Account</a></form></ div>
+	</body>
+</html>
