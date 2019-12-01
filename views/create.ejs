@@ -1,0 +1,52 @@
+<html>
+	<head>
+		<title><%=name%></title>			
+        <style> img {width: 100%;height: auto;}</style>
+	</head>
+
+	<body onload="show()">
+		<div class='container'>
+			<h1><%=name%></h1><hr>
+			<p id="photo"></p>			
+			<p>Borough: <%=borough%></p>
+			<p>Cuisine: <%=cuisine%></p>
+			<p>Street: <%=street%></p>
+			<p>Building: <%=building%></p>
+			<p>Zipcode: <%=zipcode%></p>
+			<p>GPS: [<%=lon%> , <%=lat%>]</p>
+			<p>Rating:</p>				
+			<p>Created by: <%=owner%></p>
+			<p id="map"></p>			
+			<p>
+
+		 <button onclick="window.location.href='/rate?_id=<%=_id%>&name=<%=name%>'">Rate</button>
+             	 <button onclick="window.location.href='/change?_id=<%=_id%>'">Edit</button>  
+                 <button onclick="window.location.href='/delete?_id=<%=_id%>'">Delete</button>
+		 <button onclick="window.location.href='/'">Home</button>
+
+
+			</p>			
+		</div>	
+	</body>
+</html>
+			<script>
+				function show() {
+					var show = <%=showphoto%>;
+					var map = <%=havemap%>;										
+					
+					if (show === true) {
+						photo = '<img src="data:<%=mimetype%>;base64, <%=photo%>"><hr>';
+					} else{
+						photo = 'NO PHOTO';
+					}
+					
+					if (map === true) {
+						displaymap = '<a href="/gmap?lon=<%=lon%>&lat=<%=lat%>&name=<%=name%>">Google Map</a>';
+					} else{
+						displaymap = 'NO MAP LINK';
+					}										
+					
+					document.getElementById("photo").innerHTML = photo;
+					document.getElementById("map").innerHTML = displaymap;					
+				}
+			</script>

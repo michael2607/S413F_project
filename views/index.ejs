@@ -1,0 +1,85 @@
+<html>
+	<head>
+		<title>Restaurant</title>
+		
+	</head>
+	<style type="text/css">
+	  .well {
+	      background: none;
+	      height: 320px;
+	  }
+
+	  .table-scroll tbody {
+	      position: absolute;
+	      overflow-y: scroll;
+	      height: 250px;
+	  }
+
+	  .table-scroll tr {
+	      width: 100%;
+	      table-layout: fixed;
+	      display: inline-table;
+	  }
+
+	  .table-scroll thead > tr > th {
+	      border: none;
+	  }
+	</style>
+	<body>		
+		<div class="jumbotron text-center container=fluid">
+			<h1><span style="color: #ff6600;">Restaurants</span></h1>
+			<p><span style="color: #3366ff;">Welcome User : <%= name %></span></p>
+
+			<p>There are <%=data.length%> documents in the database</p>				
+		</div>
+			
+		<div class="container">
+			
+			 <button onclick="window.location.href=href='/new'">Create Restaurant</button>
+ 			 <button onclick="window.location.href=href='/search'">Search</button>
+   			 <button onclick="window.location.href=href='/logout'">Logout</button>
+			
+			<p>
+				<div class="table-responsive" style="overflow-y: scroll;height:50%;">
+					<table class="table table-hover">
+						<thead>
+							<tr><th>Name</th></tr>
+						</thead>
+						<tbody>
+							<% for(var i in data) { %>						
+								<tr>
+									<td class=>
+										<a href="/display?_id=<%= data[i]._id%>"><%= data[i].name %></a>
+									</td>
+								</tr>												
+							<% } %>
+						</tbody>
+					</table>
+				</div>
+			</p>
+		</div>	
+	</body>
+</html>
+
+<script>
+var today = new Date();
+document.getElementById('dtText').innerHTML="Today's Date is :"+today;
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,19 @@
+{
+  "name": "server",
+  "description": "comp381f project",
+  "version": "1.0.0",
+  "dependencies": {
+    "mongodb": "2.2.36",
+    "formidable": "*",
+    "express": "latest",
+    "ejs": "latest",
+    "express-session": "latest",
+    "body-parser": "latest",
+    "session": "*",
+    "cookie-session": "*"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engine": "*"
+}

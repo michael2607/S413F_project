@@ -1,0 +1,33 @@
+<html>
+	<head>
+		<title>Rate for <%=name%></title>		
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">        
+	</head>
+	
+	<body>
+		<div class='container'>
+			<h1>Rate for <%=name%></h1><hr>
+			<p>
+				<form action="rate" method="POST">
+					
+					  <div class="input-group-prepend">
+						<h3 class="input-group-text" id="basic-addon1">Score (1-10)</h3>
+					  </div>
+<br/>
+					  <input type="number"  name="score" min="1" max="10"  required>
+					   <input type="hidden" name="_id" value="<%=_id%>">
+									
+					
+					<input type="submit"  value="Submit">
+					<a href='display?_id=<%=_id%>' >Back</a>
+				</form>
+			</p>
+		</div>
+	</body>
+</html>
+
+
+
+
+

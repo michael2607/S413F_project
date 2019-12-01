@@ -1,0 +1,88 @@
+<html>
+	<head>
+		<title>Edit Restaurant</title>
+		
+	</head>
+	<body>
+		<div class="container">
+			<h1>Modify Restaurant '<%=name%>'</h1><hr>
+			
+			<form action="change" method="post" enctype="multipart/form-data">
+			
+			
+				  <div class="input-group-prepend">
+					<span class="input-group-text" >Name</span>
+				  </div>
+				  <input type="text" name="name" value="<%=name%>"  required>
+					<br/><br/>
+				
+				  <div class="input-group-prepend">
+					<span class="input-group-text" >Borough</span>
+				  </div>
+				  <input type="text"  name="borough" value="<%=borough%>" >
+					<br/><br/>
+				
+				
+				  <div class="input-group-prepend">
+					<span class="input-group-text" >Cuisine</span>
+				  </div>
+				  <input type="text"  name="cuisine" value="<%=cuisine%>" >
+					<br/><br/>
+
+				
+				  <div class="input-group-prepend">
+					<span class="input-group-text" >Street</span>
+				  </div>
+				  <input type="text"  name="street" value="<%=street%>">
+					<br/><br/>
+
+				
+				  <div class="input-group-prepend">
+					<span class="input-group-text">Building</span>
+				  </div>
+				  <input type="text"  name="building" value="<%=building%>" >
+					<br/><br/>
+
+			
+				  <div class="input-group-prepend">
+					<span class="input-group-text" >Zipcode</span>
+				  </div>
+				  <input type="text" name="zipcode" value="<%=zipcode%>" >
+					<br/><br/>
+
+				
+				  <div class="input-group-prepend">
+					<span class="input-group-text" >GPS Coordinates (lon.)
+				</span>
+				  </div>
+				  <input type="text" name="lon" value="<%=lon%>">
+					<br/><br/>
+				
+				
+				  <div class="input-group-prepend">
+					<span class="input-group-text" >GPS Coordinates (lat.)
+				</span>
+				  </div>
+				  <input type="text"  name="lat" value="<%=lat%>">
+					<br/><br/>
+				
+			
+				  <div class="input-group-prepend">
+					<span class="input-group-text" id="inputGroupFileAddon01">Photo</span>
+				  </div>
+				  <div class="custom-file">
+					&emsp;<input type="file" name="filetoupload"  accept="image/*">				
+				  </div>
+				<br/>
+              <br/>
+				<input type="hidden" name="_id" value="<%=_id%>">
+				<p>
+					<input type="submit"  value="Change">
+					
+					<a href='/display?_id=<%=_id%>' >Back</a>
+				</p>
+			</form>
+			
+		</div>
+	</body>	
+</html>

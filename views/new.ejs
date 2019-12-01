@@ -1,0 +1,89 @@
+<html>
+	<head>
+		<title>Create New Restaurant</title>		
+	</head>
+	
+	<body>	
+		<div class='container'>
+		
+			<h1>Create a New Restaurant</h1><hr>
+			
+			<form action="create" method="post" enctype="multipart/form-data">
+			
+		
+				  <div class="input-group-prepend">
+					<span class="input-group-text" >Name</span>
+				  </div>
+				  <input type="text"  name="name"  required>
+                  <br/><br/>
+				
+				
+				  <div class="input-group-prepend">
+					<span class="input-group-text" >Borough</span>
+				  </div>
+				  <input type="text"  name="borough" >
+				<br/><br/>
+				
+				
+				  <div class="input-group-prepend">
+					<span class="input-group-text">Cuisine</span>
+				  </div>
+				  <input type="text"  name="cuisine" >
+				<br/><br/>
+
+				
+				  <div class="input-group-prepend">
+					<span class="input-group-text" >Street</span>
+				  </div>
+				  <input type="text"  name="street" >
+				<br/><br/>
+
+				
+				  <div class="input-group-prepend">
+					<span class="input-group-text" >Building</span>
+				  </div>
+				  <input type="text"  name="building" >
+				<br/><br/>
+
+				
+				  <div class="input-group-prepend">
+					<span class="input-group-text" >Zipcode</span>
+				  </div>
+				  <input type="text"  name="zipcode" >
+				<br/><br/>
+
+				
+				  <div class="input-group-prepend">
+					<span class="input-group-text">GPS Coordinates (lon.)
+</span>
+				  </div>
+				  <input type="text"  name="lon" >
+						<br/><br/>	
+				
+				
+				  <div class="input-group-prepend">
+					<span class="input-group-text" >GPS Coordinates (lat.)
+
+</span>
+				  </div>
+				  <input type="text"  name="lat" >
+			<br/><br/>
+				
+				
+				  <div class="input-group-prepend">
+					<span class="input-group-text" id="inputGroupFileAddon01">Photo</span>
+				  </div>
+				  <div class="custom-file">
+					&emsp;<input type="file" name="filetoupload"  accept="image/*">				
+				  </div>
+				<p>
+                  <br/> <br/>
+					<input type="submit" value="Submit">
+					
+					<a href='/' >Back</a>
+				</p>
+			</form>
+			
+		</div>		
+	</body>	
+</html>

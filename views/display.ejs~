@@ -1,0 +1,66 @@
+<html>
+	<head>
+		<title><%=name%></title>			
+        <style> img {width: 100%;height: auto;}</style>
+	</head>
+
+	<body onload="show()">
+		<div class='container'>
+			<h1><%=name%></h1><hr>
+			<p id="photo"></p>			
+			<p>Borough: <%=borough%></p>
+			<p>Cuisine: <%=cuisine%></p>
+			<p>Street: <%=street%></p>
+			<p>Building: <%=building%></p>
+			<p>Zipcode: <%=zipcode%></p>
+			<p>GPS: [<%=lon%> , <%=lat%>]</p>
+			<p>Rating:<%=rate%></p>				
+			<p>Created by: <%=owner%></p>
+			<p id="map"></p>			
+			<p>
+              	<button onclick="window.location.href='/rate?_id=<%=_id%>&name=<%=name%>'">Rate</button>
+              <button onclick="window.location.href='/rate?_id=<%=_id%>&name=<%=name%>'">Edit</button>  
+              <button onclick="window.location.href='/delete?_id=<%=_id%>'">Delete</button>
+               <button onclick="window.location.href=href='/'">Home</button>
+				
+			</p>			
+		</div>	
+	</body>
+</html>
+
+			<script>
+				function show() {
+					var show = <%=showphoto%>;
+					var map = <%=havemap%>;
+					var rate = <%=haverate%>;					
+					
+					if (show === true) {
+						photo = '<img src="data:<%=mimetype%>;base64, <%=photo%>"><hr>';
+					} else{
+						photo = 'NO PHOTO';
+					}
+					
+					if (map === true) {
+						displaymap = '<a href="/gmap?lon=<%=lon%>&lat=<%=lat%>&name=<%=name%>">Google Map</a>';
+					} else{
+						displaymap = 'No MAP LINK';
+					}	
+					
+					if (rate === true) {
+						var grade = <%-JSON.stringify(grades)%>;
+						var x = "<ol>";
+						for(i in grade){
+							x += "<li>"+grade[i].score;
+							x += " ("+grade[i].user+")</li>";
+							
+						}
+						x += "</ol>";
+					}else{
+						var x = "";
+					}
+					
+					document.getElementById("photo").innerHTML = photo;
+					document.getElementById("map").innerHTML = displaymap;
+					document.getElementById("rate").innerHTML = x;
+				}
+			</script>

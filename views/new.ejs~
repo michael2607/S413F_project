@@ -1,0 +1,91 @@
+<html>
+	<head>
+		<title>Create New Restaurant</title>		
+		<%-bs%>
+	</head>
+	
+	<body>	
+		<div class='container'>
+		
+			<h1>Create a New Restaurant</h1><hr>
+			
+			<form action="create" method="post" enctype="multipart/form-data">
+			
+				<div class="input-group mb-3">
+				  <div class="input-group-prepend">
+					<span class="input-group-text" id="basic-addon1">Name</span>
+				  </div>
+				  <input type="text" class="form-control" name="name" aria-describedby="basic-addon1" required>
+				</div>	
+				
+				<div class="input-group mb-3">
+				  <div class="input-group-prepend">
+					<span class="input-group-text" id="basic-addon1">Borough</span>
+				  </div>
+				  <input type="text" class="form-control" name="borough" aria-describedby="basic-addon1">
+				</div>
+				
+				<div class="input-group mb-3">
+				  <div class="input-group-prepend">
+					<span class="input-group-text" id="basic-addon1">Cuisine</span>
+				  </div>
+				  <input type="text" class="form-control" name="cuisine" aria-describedby="basic-addon1">
+				</div>
+
+				<div class="input-group mb-3">
+				  <div class="input-group-prepend">
+					<span class="input-group-text" id="basic-addon1">Street</span>
+				  </div>
+				  <input type="text" class="form-control" name="street" aria-describedby="basic-addon1">
+				</div>
+
+				<div class="input-group mb-3">
+				  <div class="input-group-prepend">
+					<span class="input-group-text" id="basic-addon1">Building</span>
+				  </div>
+				  <input type="text" class="form-control" name="building" aria-describedby="basic-addon1">
+				</div>
+
+				<div class="input-group mb-3">
+				  <div class="input-group-prepend">
+					<span class="input-group-text" id="basic-addon1">Zipcode</span>
+				  </div>
+				  <input type="text" class="form-control" name="zipcode" aria-describedby="basic-addon1">
+				</div>
+
+				<div class="input-group mb-3">
+				  <div class="input-group-prepend">
+					<span class="input-group-text" id="basic-addon1">GPS Coordinates (lon.)
+
+</span>
+				  </div>
+				  <input type="text" class="form-control" name="lon" aria-describedby="basic-addon1">
+				</div>				
+				
+				<div class="input-group mb-3">
+				  <div class="input-group-prepend">
+					<span class="input-group-text" id="basic-addon1">GPS Coordinates (lat.)
+
+</span>
+				  </div>
+				  <input type="text" class="form-control" name="lat" aria-describedby="basic-addon1">
+				</div>
+				
+				<div class="input-group mb-3">
+				  <div class="input-group-prepend">
+					<span class="input-group-text" id="inputGroupFileAddon01">Photo</span>
+				  </div>
+				  <div class="custom-file">
+					&emsp;<input type="file" name="filetoupload" class="form-control-file" accept="image/*">				
+				  </div>
+				</div>
+				<p>
+					<input type="submit" class="btn btn-success" value="Submit">
+					
+					<a href='/' class="btn btn-primary">Back</a>
+				</p>
+			</form>
+			
+		</div>		
+	</body>	
+</html>

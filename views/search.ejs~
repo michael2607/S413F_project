@@ -1,0 +1,51 @@
+<html>
+	<head>
+		<title>Search Restaurant</title>
+		
+	</head>
+	<body>
+		<div class="container">
+			<h1>Search by</h1><hr>
+			
+			<form class="form-inline" action="search" method="get">
+			
+					<div class="input-group-prepend">				
+						<select name="opt"  id="inputGroupSelect03">
+							<option value="name" id="name">Name</option>
+							<option value="borough" id="borough">Borough</option>
+							<option value="cuisine" id="cuisine">Cuisine</option>							
+						</select>
+					</div>
+              				<br/>
+					<input type="text" name="keywords"  value="<%=keyword%>" placeholder="Keywords" aria-label="Recipient's username" >
+              				<br/><br/>
+					<div class="input-group-append">
+						<button  type="submit">Search</button>
+						<button onclick="window.location.href='/'">Home</button>         
+					</div>					
+			  		
+			</form>
+			
+			<p id="result"></p>				
+		</div>
+	</body>
+</html>
+
+<script>
+	var results = <%-JSON.stringify(result)%>;
+	
+	if(results==""){
+		var x = "<h3>No Result</h3>";
+	}else{
+		var x = "<table class='table table-hover'><thead><tr><th>"+results.length+" <%=opt%>s contain: <%=keyword%></th></tr></thead><tbody>";
+		
+		for(i in results){
+			x += "<tr><td><a href='display?_id="+results[i]._id+"'>"+results[i].name+"</a></td></tr>";
+		}
+	
+		x += "</tbody></table>";
+	}
+	
+	document.getElementById("result").innerHTML = x;
+	document.getElementById("<%=opt%>").selected = "true";
+</script>
