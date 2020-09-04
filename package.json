@@ -3,7 +3,7 @@
   "description": "comp381f project",
   "version": "1.0.0",
   "dependencies": {
-    "mongodb": "2.2.36",
+    "mongodb": "3.6.1",
     "formidable": "*",
     "express": "latest",
     "ejs": "latest",
